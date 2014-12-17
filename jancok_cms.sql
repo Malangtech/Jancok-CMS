@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 16, 2014 at 10:22 PM
+-- Generation Time: Dec 17, 2014 at 09:22 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `jancok_cms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `e_berita`
+--
+
+CREATE TABLE IF NOT EXISTS `e_berita` (
+`id` int(11) NOT NULL,
+  `id_kat` int(1) NOT NULL,
+  `tgl` date NOT NULL,
+  `user` varchar(100) NOT NULL,
+  `judul` varchar(100) NOT NULL,
+  `konten` text NOT NULL,
+  `publik` int(1) NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `gambar` text NOT NULL,
+  `hit` int(11) NOT NULL,
+  `sumber` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -42,6 +62,37 @@ CREATE TABLE IF NOT EXISTS `e_guser` (
 `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `id_grup` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `e_kategori`
+--
+
+CREATE TABLE IF NOT EXISTS `e_kategori` (
+`id` int(11) NOT NULL,
+  `nama_kat` varchar(50) NOT NULL,
+  `deskripsi_kat` text NOT NULL,
+  `slug_kat` varchar(100) NOT NULL,
+  `parent_kat` int(1) NOT NULL,
+  `sub_kat` int(1) NOT NULL,
+  `tipe_kat` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `e_menu`
+--
+
+CREATE TABLE IF NOT EXISTS `e_menu` (
+`id` int(11) NOT NULL,
+  `nama_menu` varchar(100) NOT NULL,
+  `deskripsi_menu` text NOT NULL,
+  `parent_menu` int(1) NOT NULL,
+  `sub_menu` int(1) NOT NULL,
+  `id_kat` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,7 +133,9 @@ CREATE TABLE IF NOT EXISTS `e_sesi` (
 --
 
 INSERT INTO `e_sesi` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('10178af652c9b43fda7fa3fdc119de1f', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418764560, '');
+('10178af652c9b43fda7fa3fdc119de1f', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418764560, ''),
+('0117173559d73c32a2dec7f2d0e35e73', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418779993, ''),
+('79926e19d7caa0d5e1d62604c954f04d', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418835878, '');
 
 -- --------------------------------------------------------
 
@@ -132,6 +185,12 @@ CREATE TABLE IF NOT EXISTS `e_user` (
 --
 
 --
+-- Indexes for table `e_berita`
+--
+ALTER TABLE `e_berita`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `e_grup`
 --
 ALTER TABLE `e_grup`
@@ -141,6 +200,18 @@ ALTER TABLE `e_grup`
 -- Indexes for table `e_guser`
 --
 ALTER TABLE `e_guser`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `e_kategori`
+--
+ALTER TABLE `e_kategori`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `e_menu`
+--
+ALTER TABLE `e_menu`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -172,6 +243,11 @@ ALTER TABLE `e_user`
 --
 
 --
+-- AUTO_INCREMENT for table `e_berita`
+--
+ALTER TABLE `e_berita`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `e_grup`
 --
 ALTER TABLE `e_grup`
@@ -180,6 +256,16 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `e_guser`
 --
 ALTER TABLE `e_guser`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `e_kategori`
+--
+ALTER TABLE `e_kategori`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `e_menu`
+--
+ALTER TABLE `e_menu`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `e_uprofil`
