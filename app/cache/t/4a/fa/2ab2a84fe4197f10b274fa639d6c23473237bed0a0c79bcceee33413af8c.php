@@ -231,7 +231,7 @@ class __TwigTemplate_4afa2ab2a84fe4197f10b274fa639d6c23473237bed0a0c79bcceee3341
         echo "\"></script>
 \t\t<script src=\"";
         // line 69
-        echo twig_escape_filter($this->env, base_url("assets/js/thekamarel.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, base_url("assets/js/jancok.min.js"), "html", null, true);
         echo "\"></script>
 \t";
     }

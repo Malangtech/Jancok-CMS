@@ -62,7 +62,7 @@ class __TwigTemplate_b92b7d88f9d556382314336c3692b37c0bb239aca9ecfd02ee514483ce1
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"tabContent\" id=\"secondTab\" style=\"display: none\">
-\t\t\t\t\t\t<div class=\"floatingBox span6\">
+\t\t\t\t\t\t<div class=\"floatingBox span4\">
 \t\t\t\t\t\t\t<div class=\"container-fluid\">
 \t\t\t\t\t\t\t\t<h4>Info Transaksi 1</h4>
 
@@ -72,9 +72,19 @@ class __TwigTemplate_b92b7d88f9d556382314336c3692b37c0bb239aca9ecfd02ee514483ce1
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t<div class=\"floatingBox span6\">
+\t\t\t\t\t\t<div class=\"floatingBox span4\">
 \t\t\t\t\t\t\t<div class=\"container-fluid\">
 \t\t\t\t\t\t\t\t<h4>Info Transaksi 2</h4>
+
+\t\t\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t\t\tDeskripsi...
+\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t<div class=\"floatingBox span4\">
+\t\t\t\t\t\t\t<div class=\"container-fluid\">
+\t\t\t\t\t\t\t\t<h4>Info Transaksi 3</h4>
 
 \t\t\t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t\t\tDeskripsi...
@@ -84,7 +94,7 @@ class __TwigTemplate_b92b7d88f9d556382314336c3692b37c0bb239aca9ecfd02ee514483ce1
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"tabContent\" id=\"thirdTab\" style=\"display: none\">
-\t\t\t\t\t\t<div class=\"floatingBox span4\">
+\t\t\t\t\t\t<div class=\"floatingBox span6\">
 \t\t\t\t\t\t\t<div class=\"container-fluid\">
 \t\t\t\t\t\t\t\t<h4>Info Log 1</h4>
 
@@ -94,19 +104,9 @@ class __TwigTemplate_b92b7d88f9d556382314336c3692b37c0bb239aca9ecfd02ee514483ce1
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t\t\t<div class=\"floatingBox span4\">
+\t\t\t\t\t\t<div class=\"floatingBox span6\">
 \t\t\t\t\t\t\t<div class=\"container-fluid\">
 \t\t\t\t\t\t\t\t<h4>Info Log 2</h4>
-
-\t\t\t\t\t\t\t\t<p>
-\t\t\t\t\t\t\t\t\tDeskripsi...
-\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-
-\t\t\t\t\t\t<div class=\"floatingBox span4\">
-\t\t\t\t\t\t\t<div class=\"container-fluid\">
-\t\t\t\t\t\t\t\t<h4>Info Log 3</h4>
 
 \t\t\t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t\t\tDeskripsi...
