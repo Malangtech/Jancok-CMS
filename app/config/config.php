@@ -34,7 +34,7 @@
 	$config['cookie_path'] = "/";
 	$config['cookie_secure'] = FALSE;
 	$config['global_xss_filtering'] = TRUE;
-	$config['csrf_protection'] = TRUE;
+	$config['csrf_protection'] = FALSE;
 	$config['csrf_token_name'] = 'csrf_e';
 	$config['csrf_cookie_name'] = 'csrf_e';
 	$config['csrf_expire'] = 3600;

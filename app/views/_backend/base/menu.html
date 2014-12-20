@@ -1,0 +1,77 @@
+{% extends "sidebar.html" %}
+
+{% block menu %}
+			<div class="mainmenu">
+				<div class="container-fluid">
+					<ul class="nav">
+						<li class="collapseMenu"><a href="#"><i class="icon-double-angle-left"></i>Tutup Menu<i class="icon-double-angle-right deCollapse"></i></a></li>
+
+						<li class="divider-vertical firstDivider"></li>
+
+						<li class="left-side active" id="dashboard"><a href="{{ site_url() }}"><i class="icon-dashboard"></i> Dasbor</a></li>
+
+						<li class="divider-vertical"></li>
+
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="formElements"><i class="icon-list"></i> Menu <span class="label label-pressed">3</span></a>
+
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu</a></li>
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu</a></li>
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu</a></li>
+							</ul>
+						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="interface"><i class="icon-pencil"></i> Manage Akun <span class="label label-pressed">2</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="{{ site_url("user/edit_profil") }}">Edit Profil</a></li>
+								<li><a tabindex="-1" href="{{ site_url("user/edit_data") }}">Edit Data</a></li>
+							</ul>
+						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="samplePages"><i class="icon-globe"></i> Menu 10 <span class="label label-pressed">7</span></a>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu 11</a></li>
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu 12</a></li>
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu 13</a></li>
+								<li><a tabindex="-1" href="{{ site_url() }}">Menu 14</a></li>
+								<li class="dropdown-submenu">
+									<a href="#">menu 15</a>
+
+									<ul class="dropdown-menu">
+										<li><a href="{{ site_url() }}">Menu 16</a></li>
+										<li><a href="{{ site_url() }}">Menu 17</a></li>
+
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a href="{{ site_url() }}">Menu 18</a>
+
+									<ul class="dropdown-menu">
+										<li><a href="{{ site_url() }}">Menu 19</a></li>
+										<li><a href="{{ site_url() }}">Menu 20</a></li>
+										<li><a href="{{ site_url() }}">Menu 21</a></li>
+										<li class="dropdown-submenu">
+											<a href="{{ site_url() }}">Menu 22</a>
+
+											<ul class="dropdown-menu">
+												<li><a href="{{ site_url() }}">Menu 23</a></li>
+												<li><a href="{{ site_url() }}">Menu 24</a></li>
+												<li><a href="{{ site_url() }}">Menu 25</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li>
+					</ul>
+				</div>
+			</div>
+{% endblock %}

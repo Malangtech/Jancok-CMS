@@ -1,0 +1,329 @@
+{% extends "header.html" %}
+
+{% block sidebar %}
+			<!-- bag. buka tutup sidebar -->
+				<div id="collapsedSidebarContent">
+					<div class="sidebarDivider"></div>
+
+					<div class="sidebarContent">
+						<ul class="collapsedSidebarMenu">
+							<li>
+								<a href="#tasksContent" class="sidebar">Aktivitas
+									<div class="notifyCircle cyan">3</div>
+									<i class="icon-chevron-sign-right"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="#notificationsContent" class="sidebar">Pemberitahuan
+									<div class="notifyCircle orange">9</div>
+									<i class="icon-chevron-sign-right"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="#messagesContent" class="sidebar">Pesan
+									<div class="notifyCircle red">12</div>
+									<i class="icon-chevron-sign-right"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="#settingsContent" class="sidebar">Pengaturan
+									<i class="icon-chevron-sign-right"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="#profileContent" class="sidebar">Nama User
+									<i class="icon-chevron-sign-right"></i>
+								</a>
+							</li>
+
+							<li class="sublevel">
+								<a href="#">Edit Profil
+									<i class="icon-user"></i>
+								</a>
+							</li>
+
+							<li class="sublevel">
+								<a href="#">Ubah Password
+									<i class="icon-lock"></i>
+								</a>
+							</li>
+
+							<li class="sublevel">
+								<a href="#">Logout
+									<i class="icon-off"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			<!-- //buka tutup sidebar -->
+
+			<!-- bag. sidebar aktivitas -->
+				<div id="tasksContent">
+					<div class="sidebarDivider"></div>
+
+					<div class="sidebarContent">
+						<a href="#collapsedSidebarContent" class="showCollapsedSidebarMenu"><i class="icon-chevron-sign-left"></i><h1> Tasks</h1></a>
+						<h1>Aktivitas</h1>
+
+						<div class="sidebarInfo">
+							<div class="progressTasks"><span class="label">11</span> Dalam Proses</div>
+							<div class="newTasks"><span class="label cyan">3</span> Aktivitas Baru</div>
+						</div>
+
+						<ul class="tasksList">
+							<li class="new">
+								<h3>TITLE</h3>
+								<span class="taskProgress">0%</span>
+								<div class="progress progress-striped active">
+									<div class="bar"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority red">Penting</div>
+									<div class="tag status cyan">Baru</div>
+								</div>
+							</li>
+							<li class="new">
+								<h3>TITLE</h3>
+								<span class="taskProgress">0%</span>
+								<div class="progress progress-striped active">
+									<div class="bar"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority orange">Normal</div>
+									<div class="tag status cyan">Baru</div>
+								</div>
+							</li>
+							<li class="new">
+								<h3>TITLE</h3>
+								<span class="taskProgress">0%</span>
+								<div class="progress progress-striped active">
+									<div class="bar"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority green">Normal</div>
+									<div class="tag status cyan">Baru</div>
+								</div>
+							</li>
+							<li>
+								<h3>TITLE</h3>
+								<span class="taskProgress">75%</span>
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 75%;"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority green">Opsional</div>
+								</div>
+							</li>
+							<li>
+								<h3>TITLE</h3>
+								<span class="taskProgress">50%</span>
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 50%;"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority red">Penting</div>
+								</div>
+							</li>
+							<li>
+								<h3>TITLE</h3>
+								<span class="taskProgress">25%</span>
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 25%;"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority orange">Normal</div>
+								</div>
+							</li>
+							<li>
+								<h3>TITLE</h3>
+								<span class="taskProgress">100%</span>
+								<div class="progress progress-striped">
+									<div class="bar" style="width: 100%;"></div>
+								</div>
+								<div class="appendedTags">
+									<div class="tag priority red">Penting</div>
+									<div class="tag status grey">Selesai</div>
+								</div>
+							</li>
+						</ul>
+						<button class="btn btn-primary">Lihat Semua</button>
+					</div>
+				</div>
+			<!-- //sidebar aktivitas -->
+
+			<!-- bag. sidebar pemberitahuan -->
+				<div id="notificationsContent">
+					<div class="sidebarDivider"></div>
+
+					<div class="sidebarContent">
+						<a href="#collapsedSidebarContent" class="showCollapsedSidebarMenu"><i class="icon-chevron-sign-left"></i><h1> Pemberitahuan</h1></a>
+						<h1>Pemberitahuan</h1>
+
+						<div class="sidebarInfo">
+							<div><span class="label">32</span> pemberitahuan</div>
+							<div><span class="label orange">9</span> pemberitahuan baru</div>
+						</div>
+
+						<ul class="notificationsList">
+							<li class="new first">
+								<div><i class="icon-user"></i> TITLE</div>
+								<span class="notificationDate">1 menit lalu <span class="pull-right notificationStatus">baru</span></span>
+							</li>
+
+							<li class="new">
+								<div><i class="icon-user"></i> TITLE</div>
+								<span class="notificationDate">3 menit lalu <span class="pull-right notificationStatus">baru</span></span>
+							</li>
+
+							<li class="new">
+								<div><i class="icon-comments"></i> TITLE</div>
+								<span class="notificationDate">15 menit lalu <span class="pull-right notificationStatus">baru</span></span>
+							</li>
+
+							<li class="new">
+								<div><i class="icon-shopping-cart"></i> TITLE</div>
+								<span class="notificationDate">23 menit lalu <span class="pull-right notificationStatus">baru</span></span>
+							</li>
+
+							<li class="new">
+								<div><i class="icon-shopping-cart"></i> TITLE</div>
+								<span class="notificationDate">1 jam lalu <span class="pull-right notificationStatus">baru</span></span>
+							</li>
+
+							<li>
+								<div><i class="icon-comments"></i> TITLE</div>
+								<span class="notificationDate">10 jam lalu</span>
+							</li>
+
+							<li>
+								<div><i class="icon-shopping-cart"></i> TITLE</div>
+								<span class="notificationDate">23 jam lalu</span>
+							</li>
+
+							<li>
+								<div><i class="icon-shopping-cart"></i> TITLE</div>
+								<span class="notificationDate">kemarin</span>
+							</li>
+
+							<li>
+								<div><i class="icon-user"></i> TITLE</div>
+								<span class="notificationDate">01 Maret 2013</span>
+							</li>
+
+							<li>
+								<div><i class="icon-user"></i> TITLE</div>
+								<span class="notificationDate">02 Maret 2013</span>
+							</li>
+						</ul>
+
+						<button class="btn btn-primary">Lihat Semua</button>
+					</div>
+				</div>
+			<!-- //sidebar notifikasi -->
+
+			<!-- bag. sidebar pesan -->
+				<div id="messagesContent">
+					<div class="sidebarDivider"></div>
+
+					<div class="sidebarContent">
+						<a href="#collapsedSidebarContent" class="showCollapsedSidebarMenu"><i class="icon-chevron-sign-left"></i><h1> Inbox</h1></a>
+						<h1>Pesan</h1>
+
+						<div class="sidebarInfo">
+							<div><span class="label">128</span> pesan</div>
+							<div><span class="label red">12</span> belum dibaca</div>
+						</div>
+
+						<ul class="messagesList">
+							<li class="unreaded">
+								<div class="messageAvatar"><img src="{{ base_url("assets/img/rimmer-avatar.jpg") }}" alt=""></div>
+								<h3>Nama</h3>
+
+								<span class="messageDate">20 Desember 2014 17:55 <span class="pull-right messageStatus">belum dibaca</span></span> 
+								<div class="messageContent">"Deskripsi..."</div>
+							</li>
+
+							<li class="unreaded">
+								<div class="messageAvatar"><img src="{{ base_url("assets/img/homer-avatar.jpg") }}" alt=""></div>
+								<h3>Nama</h3>
+
+								<span class="messageDate">18 Desember 2014 10:42 <span class="pull-right messageStatus">belum dibaca</span></span> 
+								<div class="messageContent">"Deskripsi..."</div>
+							</li>
+
+							<li class="unreaded">
+								<div class="messageAvatar"><img src="{{ base_url("assets/img/peter-avatar.jpg") }}" alt=""></div>
+								<h3>Nama</h3>
+
+								<span class="messageDate">23 November 13:22 <span class="pull-right messageStatus">belum dibaca</span></span> 
+								<div class="messageContent">"Deskripsi..."</div>
+							</li>
+
+							<li class="unreaded">
+								<div class="messageAvatar"><img src="{{ base_url("assets/img/zoidberg-avatar.jpg") }}" alt=""></div>
+								<h3>Nama</h3>
+
+								<span class="messageDate">27 Oktober 2014 19:45 <span class="pull-right messageStatus">belum dibaca</span></span> 
+								<div class="messageContent">"Deskripsi..."</div>
+							</li>
+
+							<li class="unreaded">
+								<div class="messageAvatar"><img src="{{ base_url("assets/img/peter-avatar.jpg") }}" alt=""></div>
+								<h3>Nama</h3>
+
+								<span class="messageDate">1 Oktober 04:23 <span class="pull-right messageStatus">belum dibaca</span></span> 
+								<div class="messageContent">"Deskripsi..."</div>
+							</li>
+
+							<li class="unreaded">
+								<div class="messageAvatar"><img src="{{ base_url("assets/img/rimmer-avatar.jpg") }}" alt=""></div>
+								<h3>Nama</h3>
+
+								<span class="messageDate">05.03.2013 17:55 <span class="pull-right messageStatus">unreaded</span></span> 
+								<div class="messageContent">"Deskripsi..."</div>
+							</li>
+						</ul>
+
+						<button class="btn btn-primary">Lihat Semua</button>
+					</div>
+				</div>
+			<!-- //sidebar pesan -->
+
+			<!-- bag. sidebar profil -->
+				<div id="profileContent">
+					<div class="sidebarDivider"></div>
+
+					<div class="sidebarContent">
+						<a href="#collapsedSidebarContent" class="showCollapsedSidebarMenu"><i class="icon-chevron-sign-left"></i><h1> Akun Saya</h1></a>
+						<h1>Akun Saya</h1>
+
+						<div class="profileBlock">
+							<div class="profilePhoto">
+								<div class="usernameHolder">Nama User</div>
+							</div>
+
+							<div class="profileInfo">
+								<p><i class="icon-map-marker"></i> Malang, ID</p>
+								<p><i class="icon-envelope-alt"></i> email@email.com</p>
+								<p><i class="icon-globe"></i> website.com</p>
+								<p class="aboutMe">
+									Deskripsi...
+								</p>
+							</div>
+
+							<footer>
+								<div class="profileSettingBlock editProfile"><i class="icon-user"></i>Edit Profil</div>
+								<div class="profileSettingBlock changePassword"><i class="icon-lock"></i>Ubah Password</div>
+								<div class="profileSettingBlock logout"><i class="icon-off"></i>Logout</div>
+							</footer>
+						</div>
+					</div>
+				</div>
+			<!-- //sidebar profil -->
+{% endblock %}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" href="{{ base_url("assets/favicon.ico") }}" type="image/x-icon" />
+
+		{% block stylesheets %}
+			<link rel="stylesheet" type="text/css" href="{{ base_url("assets/css/bootstrap-responsive.min.css") }}" />
+			<link rel="stylesheet" type="text/css" href="{{ base_url("assets/css/font.css") }}" />
+			<link rel="stylesheet" type="text/css" href="{{ base_url("assets/css/styles.css") }}">
+		{% endblock %}
+	</head>
+
+	<body class="dashboard">
+	{% block body %}
+		<!--[if lt IE 7]>
+			<p class="chromeframe">Anda menggunakan browser <strong>versi lama</strong>. Silahkan <a href="http://browsehappy.com/">Upgrade browser anda</a> atau <a href="http://www.google.com/chromeframe/?redirect=true">Aktifkan frame Google Chrome</a>.</p>
+		<![endif]-->
+
+		<!-- bag. menu header -->
+			{% block header %}{% endblock %}
+		<!-- //menu header -->
+
+		<!-- bag. sidebar -->
+		<div class="hiddenContent">
+			{% block sidebar %}{% endblock %}
+		</div>
+		<!-- //sidebar -->
+
+		<!-- bag. menu utama -->
+			{% block menu %}{% endblock %}
+		<!-- //menu utama -->
+
+		<!-- bag. konten halaman -->
+			<div class="content">
+				{% block content %}{% endblock %}
+			</div>
+		<!-- //konten halaman -->
+	{% endblock %}
+
+	{% block scripts %}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="{{ base_url("assets/js/vendor/jquery-1.9.1.min.js") }}"><\/script>')</script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-slider.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.sparkline.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.flot.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.flot.resize.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.flot.pie.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/wysihtml5-0.3.0_rc2.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-wysihtml5-0.0.2.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-tags.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.tablesorter.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.tablesorter.widgets.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/jquery.tablesorter.pager.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/raphael.2.1.0.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/justgage.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-multiselect.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-datepicker.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-colorpicker.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/parsley.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/formToWizard.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/vendor/bootstrap-editable.min.js") }}"></script>
+		<script src="{{ base_url("assets/js/thekamarel.min.js") }}"></script>
+	{% endblock %}
+	</body>

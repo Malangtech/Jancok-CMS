@@ -14,21 +14,20 @@
 			ini_get('include_path') . PATH_SEPARATOR . APPPATH . 'libraries/Twig');
 			require_once (string) "Autoloader" . EXT;
 
-			log_message('debug', "Twig Initialized");
+			log_message('debug', "Twig Autoloader Loaded");
 
 			Twig_Autoloader::register();
 
-			//-------
-			$t_D = [];
+			$template_dir = array();
 
-			if($this->CI->router->fetch_module() !== null) {
-				array_push($t_D, APPPATH.'modules/'.$this->CI->router->fetch_module().'/views');
+			if($this->CI->router->fetch_module() !== "") {
+				array_push($template_dir, APPPATH.'modules/'.$this->CI->router->fetch_module().'/views');
 			}
+			
+			$template_dir = array_merge($template_dir, $this->CI->config->item('template_dir'));
 
-			$t_D = array_merge($t_D, $this->CI->config->item('t_D'));
-			$this->_t_D = $t_D;
-			//-------
-
+			$this->_template_dir = $template_dir;
+			
 			$this->_cache_dir = $this->CI->config->item('cache_dir');
 
 			$loader = new Twig_Loader_Filesystem($this->_template_dir);
@@ -49,13 +48,14 @@
 			$this->_twig->addFunction($name, new Twig_Function_Function($name));
 		}
 
-		public function render($template, $data=[]) {
+		public function render($template, $data = array()) {
 			$template = $this->_twig->loadTemplate($template);
 			return $template->render($data);
 		}
 
-		public function display($template, $data=[]) {
+		public function display($template, $data = array()) {
 			$template = $this->_twig->loadTemplate($template);
+			/* elapsed_time and memory_usage */
 			$data['elapsed_time'] = $this->CI->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end');
 			$memory = (!function_exists('memory_get_usage')) ? '0' : round(memory_get_usage()/1024/1024, 2) . 'MB';
 			$data['memory_usage'] = $memory;

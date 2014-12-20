@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 17, 2014 at 09:22 PM
+-- Generation Time: Dec 20, 2014 at 08:54 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -133,9 +133,11 @@ CREATE TABLE IF NOT EXISTS `e_sesi` (
 --
 
 INSERT INTO `e_sesi` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('10178af652c9b43fda7fa3fdc119de1f', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418764560, ''),
-('0117173559d73c32a2dec7f2d0e35e73', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418779993, ''),
-('79926e19d7caa0d5e1d62604c954f04d', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1418835878, '');
+('31fa08a44943d0eadb58e14ef9e0eceb', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1419090163, ''),
+('5042c2484e21d96f8cdaffc8bd7d38dd', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1419085743, ''),
+('aa5a6bdbe81caa78e802a48c43783921', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1419076670, ''),
+('fef4e46fb0db5d00422857f93d0f12a7', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1419068538, ''),
+('869e7a8882613fcec6ac50bc8885f4b2', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36', 1419066164, '');
 
 -- --------------------------------------------------------
 
@@ -176,6 +178,7 @@ CREATE TABLE IF NOT EXISTS `e_user` (
   `tgl_register` int(11) NOT NULL,
   `login_terakhir` int(11) DEFAULT NULL,
   `online` tinyint(1) DEFAULT NULL,
+  `aktif` int(1) NOT NULL,
   `disable` int(1) DEFAULT NULL,
   `banned` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

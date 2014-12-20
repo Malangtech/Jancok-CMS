@@ -1,0 +1,176 @@
+{% extends "base/menu.html" %}
+
+{% block content %}
+	<!-- bag. tab informasi -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12 tabContainer">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#firstTab">Info Keuangan</a>
+					</li>
+
+					<li>
+						<a href="#secondTab">Info Transaksi</a>
+					</li>
+
+					<li>
+						<a href="#thirdTab">Info Log</a>
+					</li>
+
+					<li class="controlButton pull-right"><i class="icon-caret-down minimizeElement"></i></li>
+				</ul>
+
+				<div class="container-fluid">
+					<div class="tabContent" id="firstTab">
+						<div class="floatingBox span12">
+							<div class="container-fluid">
+								<h4>Info Keuangan Anda</h4>
+
+								<p>
+									Deskripsi...
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tabContent" id="secondTab" style="display: none">
+						<div class="floatingBox span4">
+							<div class="container-fluid">
+								<h4>Info Transaksi 1</h4>
+
+								<p>
+									Deskripsi...
+								</p>
+							</div>
+						</div>
+
+						<div class="floatingBox span4">
+							<div class="container-fluid">
+								<h4>Info Transaksi 2</h4>
+
+								<p>
+									Deskripsi...
+								</p>
+							</div>
+						</div>
+
+						<div class="floatingBox span4">
+							<div class="container-fluid">
+								<h4>Info Transaksi 3</h4>
+
+								<p>
+									Deskripsi...
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tabContent" id="thirdTab" style="display: none">
+						<div class="floatingBox span6">
+							<div class="container-fluid">
+								<h4>Info Log 1</h4>
+
+								<p>
+									Deskripsi...
+								</p>
+							</div>
+						</div>
+
+						<div class="floatingBox span6">
+							<div class="container-fluid">
+								<h4>Info Log 2</h4>
+
+								<p>
+									Deskripsi...
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //tab informasi -->
+
+	<!-- bag. breadcrumb -->
+	<ul class="breadcrumb">
+		<li><i class="icon-home"></i><a href="index.html"> Beranda</a> <span class="divider"><i class="icon-angle-right"></i></span></li>
+		<li class="active">Dashboard</li>
+		<li class="moveDown pull-right">
+			<span class="time"></span>
+			<span class="date"></span>
+		</li>
+	</ul>
+	<!-- //breadcrumb -->
+
+	<!-- bag. menu cepat -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<ul class="masterActions">
+				<li class="active">
+					<i class="icon-envelope redText"></i>
+					<h1 class="redText">Title</h1>
+					<p>Deskripsi</p>
+					<div class="notifyCircle red">12</div>
+				</li>
+
+				<li>
+					<i class="icon-ok-sign cyanText"></i>
+					<h1 class="cyanText">Title</h1>
+					<p>Deskripsi</p>
+					<div class="notifyCircle cyan">3</div>
+				</li>
+
+				<li>
+					<i class="icon-shopping-cart greenText"></i>
+					<h1 class="greenText">Title</h1>
+					<p>Deskripsi</p>
+					<div class="notifyCircle green">254</div>
+				</li>
+
+				<li>
+					<i class="icon-bar-chart orangeText"></i>
+					<h1 class="orangeText">Title</h1>
+					<p>Deskripsi</p>
+				</li>
+
+				<li>
+					<i class="icon-inbox greyText"></i>
+					<h1 class="greyText">Title</h1>
+					<p>Deskripsi</p>
+					<div class="notifyCircle grey">2</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //menu cepat -->
+
+		<!-- pemisah -->
+		<div class="row-fluid">
+			<div class="span12 contentDivider"></div>
+		</div>
+		<!-- //pemisah -->
+
+		<!-- bag. log pengguna -->
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="containerHeadline">
+					<i class="icon-th"></i><h2>Log Pengguna</h2>
+					<div class="controlButton pull-right"><i class="icon-caret-down minimizeElement"></i></div>
+				</div>
+
+				<div class="floatingBox">
+					<div class="container-fluid">
+						<p>
+							Login Saat ini: 20 Desember 2014 13:45:25 <br/>
+							Login Terakhir: 18 Desember 2014 18:35:46 <br/>
+							User Agent: Mozilla <br/>
+							IP Login Terakhir: 192.168.1.1 <br/>
+							Kota: Malang <br/>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //log pengguna -->
+{% endblock %}
